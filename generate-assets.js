@@ -46,7 +46,7 @@ const employees = [
   }
 ];
 
-const BASE_URL = 'https://djinna.github.io/cards';
+const BASE_URL = 'https://yourmaritimepartner.github.io/cards';
 const COMPANY = 'Shipwright';
 
 // Generate slug from name
