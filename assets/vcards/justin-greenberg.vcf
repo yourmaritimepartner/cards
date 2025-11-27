@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Greenberg;Justin;;;
+FN:Justin Greenberg
+ORG:Shipwright
+TEL;TYPE=CELL:+19543034432
+EMAIL;TYPE=WORK:jgreenberg@shipwright.biz
+URL;TYPE=WORK:https://www.shipwright.biz
+URL;TYPE=PREF:https://djinna.github.io/cards/justin-greenberg.html
+END:VCARD

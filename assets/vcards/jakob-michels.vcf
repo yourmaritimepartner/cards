@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Michels;Jakob;;;
+FN:Jakob Michels
+ORG:Shipwright
+TEL;TYPE=CELL:+17724856417
+EMAIL;TYPE=WORK:jmichels@shipwright.biz
+URL;TYPE=WORK:https://www.shipwright.biz
+URL;TYPE=PREF:https://djinna.github.io/cards/jakob-michels.html
+END:VCARD
