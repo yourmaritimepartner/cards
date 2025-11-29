@@ -135,6 +135,120 @@ There are two HTML templates for individual cards:
 2. Test locally by opening HTML files in browser
 3. Commit and push to deploy via GitHub Pages
 
+---
+
+## Git Workflow - Step by Step
+
+**IMPORTANT FOR AI ASSISTANTS**: Always walk the user through git commands step by step. Never assume they know git. Provide explicit commands they can copy and paste.
+
+### Checking Current Status
+
+Before any git operation, check where you stand:
+
+```bash
+# Step 1: See what branch you're on and what files have changed
+git status
+
+# Step 2: See recent commits
+git log --oneline -5
+```
+
+### Getting Latest Changes from GitHub
+
+When you need to sync your local repo with GitHub:
+
+```bash
+# Step 1: Fetch the latest from GitHub (downloads but doesn't change your files)
+git fetch origin main
+
+# Step 2: See if you're behind
+git status
+
+# Step 3: Pull the changes into your local branch
+git pull origin main
+```
+
+### After Someone Else Pushes Changes (Including AI)
+
+If changes were pushed to a branch (e.g., by Claude), you need to pull them:
+
+```bash
+# Step 1: Fetch all remote branches
+git fetch origin
+
+# Step 2: Switch to the branch with changes (if not already on it)
+git checkout <branch-name>
+
+# Step 3: Pull the latest changes
+git pull origin <branch-name>
+```
+
+### Merging a Feature Branch into Main
+
+After reviewing changes on a feature branch:
+
+```bash
+# Step 1: Switch to main branch
+git checkout main
+
+# Step 2: Make sure main is up to date
+git pull origin main
+
+# Step 3: Merge the feature branch
+git merge <branch-name>
+
+# Step 4: Push the merged main to GitHub
+git push origin main
+```
+
+### Creating a Pull Request (Alternative to Direct Merge)
+
+If you prefer reviewing on GitHub:
+
+1. Go to: `https://github.com/yourmaritimepartner/cards`
+2. Click "Pull requests" tab
+3. Click "New pull request"
+4. Select your feature branch to merge into main
+5. Review changes and click "Create pull request"
+6. After review, click "Merge pull request"
+
+### Saving Your Own Changes
+
+When you've edited files and want to save to GitHub:
+
+```bash
+# Step 1: See what changed
+git status
+
+# Step 2: Add the files you want to save
+git add <filename>
+# Or add everything:
+git add .
+
+# Step 3: Commit with a message describing what you did
+git commit -m "Your description here"
+
+# Step 4: Push to GitHub
+git push origin main
+```
+
+### If You Get Merge Conflicts
+
+If git says there's a conflict:
+
+```bash
+# Step 1: Open the conflicted file in your editor
+# Look for lines with <<<<<<< and >>>>>>>
+
+# Step 2: Edit the file to keep what you want, remove the conflict markers
+
+# Step 3: Mark as resolved and commit
+git add <filename>
+git commit -m "Resolve merge conflict in <filename>"
+```
+
+---
+
 ## Important Notes
 
 - The `generate-assets.js` employee list may be out of sync with actual HTML files - always verify both when adding/removing employees
